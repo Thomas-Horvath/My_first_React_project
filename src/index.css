@@ -1,13 +1,82 @@
-body {
+*,
+*::after,
+*::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  /*  
+  --primary-hue: 20;
+  --gray-hue: 280;
+   */
+  --primary-hue: 210;
+  --gray-hue: 240;
+
+  /*  
+  --color-primary: hsl(var(--primary-hue), 100%, 50%); 
+  */
+  --color-primary: #0080ff;
+  --color-prmary-varient: #4da6ff;
+  --color-secondary: #ffb116;
+  --color-gray-100: #e9e9f7;
+  --color-gray-200: #afafd0;
+  --color-gray-300: #8d8db9;
+  --color-gray-400: #585879;
+  --color-gray-500: #24245c;
+  --color-gray-600: #141439;
+
+  --container-width-lg: 80%;
+  --container-width-md: 90%;
+
+  --transition: all .5s ease;
+
+}
+
+/*  GENERAL STYLES */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-gray-200);
+  line-height: 1.7;
+  overflow-x: hidden;
+  background: var(--color-gray-600);
+}
+
+.container {
+  width: var(--container-width-lg);
+  max-width: 1920px;
+  /* margin: 0 auto;  */
+  /* ez ugyan azt csinálja mint az inline */
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+  color: var(--color-gray-100);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+a {
+  color: var(--color-gray-100);
+}
+img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
 }
